@@ -1,0 +1,14 @@
+---
+import Card from "./Card/index.astro";
+import { VIBES } from "../lib/constants";
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="Current Vibe ✨">
+  <ul class="flex flex-wrap gap-2">
+    {VIBES.map((vibe) => (
+      <li class="text-xs bg-darkslate-400 px-3 py-1.5 rounded-full border border-darkslate-100 hover:border-primary-500 transition-colors">
+        {vibe}
+      </li>
+    ))}
+  </ul>
+</Card>

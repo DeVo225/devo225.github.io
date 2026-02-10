@@ -1,11 +1,29 @@
 export const LINKS = {
-  github: "https://github.com/Ladvace",
-  linkedin: "https://www.linkedin.com/in/gianmarco-cavallo/",
-  medium: "https://ladvace.medium.com/",
-  discord: "https://discordapp.com/users/163300027618295808",
-  dribble: "https://dribbble.com/Ladvace_Jace",
-  email: "contact@gianmarcocavallo.com<",
+  linkedin: "https://www.linkedin.com/in/thomasdevuono/",
+  twitter: "https://twitter.com/thomasdevuono",
+  lickability: "https://lickability.com",
+  email: "mailto:thomas@lickability.com",
+  bookTime: "https://cal.com/thomasdevuono", // placeholder
 };
+
+// Easy to edit - just update this array
+export const VIBES = [
+  "golf simulator season",
+  "cold brew",
+  "Umamusume",
+  "ramen",
+];
+
+// Placeholder golf course images - replace with real ones later
+export const GOLF_IMAGES = [
+  { src: "/placeholder-golf-1.jpg", alt: "Golf course 1" },
+  { src: "/placeholder-golf-2.jpg", alt: "Golf course 2" },
+  { src: "/placeholder-golf-3.jpg", alt: "Golf course 3" },
+  { src: "/placeholder-golf-4.jpg", alt: "Golf course 4" },
+];
+
+// Spotify embed - replace track ID with your preferred track
+export const SPOTIFY_TRACK_ID = "4cOdK2wGLETKBW3PvgPWqT"; // placeholder
 
 export const loaderAnimation = [
   ".loader",

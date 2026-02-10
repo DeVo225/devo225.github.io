@@ -1,0 +1,21 @@
+---
+import Card from "./Card/index.astro";
+import { GOLF_IMAGES } from "../lib/constants";
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-3" title="Golf ⛳️">
+  <div class="flex flex-col gap-3 h-full">
+    <p class="text-sm font-light">
+      ~100 rounds/year, single digit handicap
+    </p>
+    <!-- Image gallery - 2x2 grid -->
+    <div class="grid grid-cols-2 gap-2 flex-1 min-h-0">
+      {GOLF_IMAGES.slice(0, 4).map((image) => (
+        <div class="bg-darkslate-400 rounded border border-darkslate-100 flex items-center justify-center aspect-square overflow-hidden">
+          <!-- Replace with real images: <img src={image.src} alt={image.alt} class="w-full h-full object-cover" /> -->
+          <span class="text-2xl opacity-50">🏌️</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</Card>
