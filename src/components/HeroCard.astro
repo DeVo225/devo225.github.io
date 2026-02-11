@@ -2,7 +2,7 @@
 import Card from "./Card/index.astro";
 ---
 
-<Card colSpan="md:col-span-2" rowSpan="md:row-span-4">
+<Card colSpan="md:col-span-2" rowSpan="md:row-span-3">
   <div class="flex flex-col md:flex-row w-full h-full gap-6 items-start">
     <!-- Photo - shows first on mobile, right side on desktop -->
     <div class="w-full md:w-auto md:order-2 flex-shrink-0 flex justify-center">
@@ -15,8 +15,8 @@ import Card from "./Card/index.astro";
       </div>
     </div>
     <!-- Text content -->
-    <div class="flex flex-col md:order-1 flex-1 max-w-prose text-center md:text-left">
-      <h1 class="text-2xl md:text-3xl font-bold mb-2">Thomas DeVuono</h1>
+    <div class="flex flex-col md:order-1 flex-1 max-w-prose text-center md:text-left pb-0">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2 leading-tight">Thomas DeVuono</h1>
       <p class="text-base md:text-lg font-light text-neutral-300">
         Client Services @ <a 
           href="https://lickability.com" 
@@ -28,16 +28,16 @@ import Card from "./Card/index.astro";
       </p>
       
       <!-- Divider -->
-      <div class="border-t border-darkslate-100 my-3"></div>
+      <div class="border-t border-darkslate-100 mt-4 mb-3"></div>
       
-      <!-- Location -->
-      <p class="text-xs text-neutral-400 opacity-80 tracking-wide">New Jersey</p>
+      <!-- Location (secondary) -->
+      <p class="text-xs text-neutral-400 opacity-75 tracking-wide font-medium">New Jersey</p>
       
       <!-- Divider -->
       <div class="border-t border-darkslate-100 my-3"></div>
       
-      <!-- Education -->
-      <div class="text-xs text-neutral-400 opacity-80 tracking-wide">
+      <!-- Education (tertiary) -->
+      <div class="text-xs text-neutral-400 opacity-60 tracking-wide">
         <p>NJIT – M.S. Engineering Management</p>
         <p>NJIT – B.S. Mechanical Engineering</p>
       </div>
