@@ -1,11 +1,32 @@
 ---
 import Card from "./Card/index.astro";
-import { LINKS } from "../lib/constants";
+
+const capabilities = [
+  "Discovery",
+  "Deal Structuring",
+  "Contracts",
+  "Negotiation",
+  "Partnerships",
+  "Revenue Planning",
+];
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" href={LINKS.lickability} title="Work">
-  <p class="text-sm font-light">
-    I lead client partnerships at <strong>Lickability</strong>, helping teams scope and launch thoughtful mobile app projects. 
-I focus on discovery, strategy, and sales, setting our design and engineering team up to deliver great work.
-  </p>
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="💼 Work">
+  <div class="flex flex-col gap-2 -mb-1">
+    <p class="text-sm font-light leading-relaxed">
+      I lead client services, working with founders and Fortune 500 product teams to scope, price, and ship high-quality mobile apps.
+    </p>
+    
+    <!-- Divider -->
+    <div class="border-t border-darkslate-100 my-1"></div>
+    
+    <!-- Capability pills -->
+    <ul class="flex flex-wrap gap-1.5">
+      {capabilities.map((cap) => (
+        <li class="text-xs bg-darkslate-400/60 px-2.5 py-1 rounded-full border border-darkslate-100 text-neutral-300">
+          {cap}
+        </li>
+      ))}
+    </ul>
+  </div>
 </Card>
