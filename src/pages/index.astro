@@ -34,20 +34,30 @@ import ContactCard from "../components/ContactCard.astro";
   description="Client Services at Lickability. Golf obsessive. Coffee enthusiast."
   title="Thomas DeVuono"
 >
-  <main
-    class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:grid-rows-6 lg:grid-cols-4 lg:gap-4"
-  >
-    <!-- Row 1-2: Hero (large) + Work -->
-    <HeroCard />
-    <WorkCard />
+  <!-- Top section: Hero + Work side by side -->
+  <section class="text-white m-auto p-2 max-w-6xl w-full sm:p-4 md:p-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-2 md:gap-3 lg:gap-4">
+      <HeroCard />
+      <WorkCard />
+    </div>
+  </section>
+  
+  <!-- Golf section - full width -->
+  <section class="text-white m-auto px-2 pb-2 max-w-6xl w-full sm:px-4 sm:pb-4 md:px-6 md:pb-6">
     <GolfCard />
-    
-    <!-- Row 3-4: Music + Vibe + Contact -->
-    <MusicCard />
-    <VibeCard />
-    <ContactCard />
-    
-    <!-- Footer -->
+  </section>
+  
+  <!-- Bottom section: Music + Vibe + Contact - 3 equal cards -->
+  <section class="text-white m-auto px-2 pb-2 max-w-6xl w-full sm:px-4 sm:pb-4 md:px-6 md:pb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-2 md:gap-3 lg:gap-4">
+      <MusicCard />
+      <VibeCard />
+      <ContactCard />
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="text-white m-auto px-2 pb-4 max-w-6xl w-full sm:px-4 md:px-6">
     <Card colSpan="md:col-span-4" rowSpan="md:row-span-1">
       <p class="text-xs text-center">
         © 2025 · Crafted with ♥️ using <a
@@ -57,5 +67,5 @@ import ContactCard from "../components/ContactCard.astro";
         > by Thomas.
       </p>
     </Card>
-  </main>
+  </footer>
 </Layout>

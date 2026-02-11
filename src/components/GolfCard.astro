@@ -1,21 +1,37 @@
 ---
-import Card from "./Card/index.astro";
-import { GOLF_IMAGES } from "../lib/constants";
+const golfImages = [
+  { src: "/Golf Pictures/Bayonne Golf Club.jpeg", title: "Bayonne Golf Club", cropTop: true },
+  { src: "/Golf Pictures/Pinehurst Number 2.jpeg", title: "Pinehurst Number 2", cropTop: true },
+  { src: "/Golf Pictures/Philadelphia Cricket Club \u2013 Wissahickon.jpeg", title: "Philadelphia Cricket Club" },
+  { src: "/Golf Pictures/Wynn Golf Club.jpeg", title: "Wynn Golf Club" },
+  { src: "/Golf Pictures/Las Vegas Paiute Golf Resort \u2013 The Wolf.jpeg", title: "Las Vegas Paiute Golf Resort" },
+  { src: "/Golf Pictures/Corales Golf Club.jpeg", title: "Corales Golf Club" },
+];
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-3" title="Golf ⛳️">
-  <div class="flex flex-col gap-3 h-full">
-    <p class="text-sm font-light">
+<div class="card bg-darkslate-500 shadow-lg rounded-lg p-4 md:p-6 border border-darkslate-100 hover:border-primary-500 transition duration-75">
+  <!-- Header -->
+  <div class="mb-4">
+    <h2 class="text-xl font-bold mb-1">Golf ⛳️</h2>
+    <p class="text-sm font-light text-neutral-300">
       ~100 rounds/year, single digit handicap
     </p>
-    <!-- Image gallery - 2x2 grid -->
-    <div class="grid grid-cols-2 gap-2 flex-1 min-h-0">
-      {GOLF_IMAGES.slice(0, 4).map((image) => (
-        <div class="bg-darkslate-400 rounded border border-darkslate-100 flex items-center justify-center aspect-square overflow-hidden">
-          <!-- Replace with real images: <img src={image.src} alt={image.alt} class="w-full h-full object-cover" /> -->
-          <span class="text-2xl opacity-50">🏌️</span>
-        </div>
-      ))}
-    </div>
   </div>
-</Card>
+  
+  <!-- Cinematic image gallery - 3 cols desktop, 2 tablet, 1 mobile -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {golfImages.map((image) => (
+      <div class="flex flex-col gap-1.5">
+        <div class="rounded-xl border border-darkslate-100 overflow-hidden" style="aspect-ratio: 16/10;">
+          <img 
+            src={image.src} 
+            alt={image.title} 
+            class={`w-full h-full object-cover hover:scale-105 transition-transform duration-300 ${image.cropTop ? 'object-[50%_25%]' : ''}`}
+            loading="lazy"
+          />
+        </div>
+        <p class="text-xs text-neutral-400 opacity-75 pl-0.5">{image.title}</p>
+      </div>
+    ))}
+  </div>
+</div>
