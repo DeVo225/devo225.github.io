@@ -1,3 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <text y=".9em" font-size="90">☕️</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Coffee cup -->
+  <path d="M3 8h15v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z" fill="#8B4513"/>
+  <!-- Cup rim -->
+  <rect x="2" y="7" width="17" height="2" rx="1" fill="#A0522D"/>
+  <!-- Handle -->
+  <path d="M18 9h1a3 3 0 010 6h-1" stroke="#8B4513" stroke-width="2" fill="none"/>
+  <!-- Steam -->
+  <path d="M7 4c0-1 1-2 1-2s1 1 1 2-1 2-1 2-1-1-1-2z" fill="#D3D3D3" opacity="0.7"/>
+  <path d="M11 3c0-1 1-2 1-2s1 1 1 2-1 2-1 2-1-1-1-2z" fill="#D3D3D3" opacity="0.7"/>
 </svg>
