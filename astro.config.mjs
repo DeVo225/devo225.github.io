@@ -12,13 +12,12 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
   site: "https://devo225.github.io",
-  base: "/td-website",
   integrations: [
     sitemap(),
     robotsTxt({
       sitemap: [
-        "https://devo225.github.io/td-website/sitemap-index.xml",
-        "https://devo225.github.io/td-website/sitemap-0.xml",
+        "https://devo225.github.io/sitemap-index.xml",
+        "https://devo225.github.io/sitemap-0.xml",
       ],
     }),
     solidJs(),
