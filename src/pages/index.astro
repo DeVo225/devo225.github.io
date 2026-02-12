@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card/index.astro";
 import HeroCard from "../components/HeroCard.astro";
 import WorkCard from "../components/WorkCard.astro";
 import GolfCard from "../components/GolfCard.astro";
@@ -57,15 +56,7 @@ import ContactCard from "../components/ContactCard.astro";
   </section>
   
   <!-- Footer -->
-  <footer class="text-white m-auto px-2 pb-4 max-w-6xl w-full sm:px-4 md:px-6">
-    <Card colSpan="md:col-span-4" rowSpan="md:row-span-1">
-      <p class="text-xs text-center">
-        © 2025 · Crafted with ♥️ using <a
-          class="text-red-500"
-          href="https://astro.build/"
-          target="_blank">Astro</a
-        > by Thomas.
-      </p>
-    </Card>
+  <footer class="text-neutral-500 text-xs text-center m-auto px-4 py-6 max-w-6xl w-full">
+    © 2025 Thomas DeVuono · Built with <a class="text-neutral-400 hover:text-neutral-300 transition-colors" href="https://astro.build/" target="_blank">Astro</a>
   </footer>
 </Layout>

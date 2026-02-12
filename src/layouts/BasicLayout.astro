@@ -13,7 +13,7 @@ const { title, description, page, pubDate } = Astro.props;
 const image =
   page === "travel"
     ? `${Astro.url.origin}/globe_preview.webp"`
-    : `${Astro.url.origin}/og-image.png`;
+    : `${Astro.url.origin}/og-image.jpeg`;
 
 const schema =
   page !== "blog"
@@ -23,7 +23,7 @@ const schema =
         name: "Thomas DeVuono",
         url: Astro.url.origin,
         sameAs: [LINKS.linkedin, LINKS.twitter],
-        image: `${Astro.url.origin}/og-image.png`,
+        image: `${Astro.url.origin}/og-image.jpeg`,
         jobTitle: "Senior Account Manager",
         worksFor: {
           "@type": "Organization",
@@ -48,7 +48,7 @@ const schema =
         },
         headline: title || title,
         description: description || title,
-        image: `${Astro.url.origin}/og-image.png`,
+        image: `${Astro.url.origin}/og-image.jpeg`,
         author: {
           "@type": "Person",
           name: "Thomas DeVuono",
@@ -60,7 +60,7 @@ const schema =
           name: "Thomas DeVuono",
           logo: {
             "@type": "ImageObject",
-            url: `${Astro.url.origin}/og-image.png`,
+            url: `${Astro.url.origin}/og-image.jpeg`,
           },
         },
         datePublished: pubDate || new Date().toISOString(),
@@ -73,7 +73,7 @@ const schema =
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width" name="viewport" />
-    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
     <meta content={Astro.generator} name="generator" />
     <title>{title}</title>
     <meta content={description} name="description" />
@@ -84,7 +84,7 @@ const schema =
     <meta content="website" property="og:type" />
     <meta content={Astro.url.origin} property="og:url" />
     <meta
-      content={image || `${Astro.url.origin}/og-image.png`}
+      content={image || `${Astro.url.origin}/og-image.jpeg`}
       property="og:image"
     />
     <!-- Basic Twitter Card tags -->
@@ -92,7 +92,7 @@ const schema =
     <meta content={title} name="twitter:title" />
     <meta content={description} name="twitter:description" />
     <meta
-      content={image || `${Astro.url.origin}/og-image.png`}
+      content={image || `${Astro.url.origin}/og-image.jpeg`}
       name="twitter:image"
     />
 
