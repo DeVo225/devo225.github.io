@@ -1,9 +1,10 @@
 export const LINKS = {
-  linkedin: "https://www.linkedin.com/in/thomasdevuono/",
-  twitter: "https://twitter.com/thomasdevuono",
+  linkedin: "https://www.linkedin.com/in/thomas-devuono-7139417a/",
+  twitter: "https://x.com/ThomasDeVuono",
   lickability: "https://lickability.com",
-  email: "mailto:thomas@lickability.com",
-  bookTime: "https://cal.com/thomasdevuono", // placeholder
+  email: "mailto:tom@lickability.net",
+  bookTime: "https://ro.am/tommyd/",
+  instagram: "https://www.instagram.com/thomas.devuono/",
 };
 
 // Easy to edit - just update this array

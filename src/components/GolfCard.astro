@@ -1,7 +1,7 @@
 ---
 const golfImages = [
-  { src: "/Golf Pictures/Bayonne Golf Club.jpeg", title: "Bayonne Golf Club", cropTop: true },
-  { src: "/Golf Pictures/Pinehurst Number 2.jpeg", title: "Pinehurst Number 2", cropTop: true },
+  { src: "/Golf Pictures/Bayonne Golf Club.jpeg", title: "Bayonne Golf Club", position: "50% 40%" },
+  { src: "/Golf Pictures/Pinehurst Number 2.jpeg", title: "Pinehurst Number 2", position: "50% 25%" },
   { src: "/Golf Pictures/Philadelphia Cricket Club \u2013 Wissahickon.jpeg", title: "Philadelphia Cricket Club" },
   { src: "/Golf Pictures/Wynn Golf Club.jpeg", title: "Wynn Golf Club" },
   { src: "/Golf Pictures/Las Vegas Paiute Golf Resort \u2013 The Wolf.jpeg", title: "Las Vegas Paiute Golf Resort" },
@@ -26,7 +26,8 @@ const golfImages = [
           <img 
             src={image.src} 
             alt={image.title} 
-            class={`w-full h-full object-cover hover:scale-105 transition-transform duration-300 ${image.cropTop ? 'object-[50%_25%]' : ''}`}
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            style={image.position ? `object-position: ${image.position}` : undefined}
             loading="lazy"
           />
         </div>
