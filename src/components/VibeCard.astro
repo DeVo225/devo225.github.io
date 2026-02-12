@@ -1,14 +1,25 @@
 ---
 import Card from "./Card/index.astro";
-import { VIBES } from "../lib/constants";
+
+const vibeGifs = [
+  { src: "/Vibe GIFs/gold ship aaaah.gif", alt: "Gold Ship" },
+  { src: "/Vibe GIFs/sakura-bakushin-o-umamusume.gif", alt: "Sakura Bakushin-O" },
+  { src: "/Vibe GIFs/spinny_skelly.gif", alt: "Spinny Skeleton" },
+  { src: "/Vibe GIFs/that is a good idea.gif", alt: "That's a good idea" },
+];
 ---
 
-<Card colSpan="md:col-span-1" title="Current Vibe ✨">
-  <ul class="flex flex-wrap gap-2">
-    {VIBES.map((vibe) => (
-      <li class="text-xs bg-darkslate-400 px-3 py-1.5 rounded-full border border-darkslate-100 hover:border-primary-500 transition-colors">
-        {vibe}
-      </li>
+<Card colSpan="md:col-span-1" title="✨ Current Vibe">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+    {vibeGifs.slice(0, 4).map((gif) => (
+      <div class="rounded-lg overflow-hidden border border-darkslate-100 aspect-square">
+        <img 
+          src={gif.src} 
+          alt={gif.alt}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
     ))}
-  </ul>
+  </div>
 </Card>
