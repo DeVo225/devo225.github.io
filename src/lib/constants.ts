@@ -23,7 +23,7 @@ export const GOLF_IMAGES = [
 ];
 
 // Spotify embed - replace track ID with your preferred track
-export const SPOTIFY_TRACK_ID = "4cOdK2wGLETKBW3PvgPWqT"; // placeholder
+export const SPOTIFY_TRACK_ID = "3FYDqY5BRtx3IVSaiQZSze"; // Anri - 悲しみがとまらない
 
 export const loaderAnimation = [
   ".loader",
