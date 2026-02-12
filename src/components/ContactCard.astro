@@ -13,17 +13,17 @@ const contactLinks = [
 ---
 
 <Card colSpan="md:col-span-1" title="🗣️ Let's Connect">
-  <div class="flex flex-col gap-1.5 mt-1">
+  <div class="flex flex-col gap-2 mt-1">
     {contactLinks.map((link) => (
       <a 
         href={link.href} 
         target={link.external ? "_blank" : undefined}
         rel={link.external ? "noopener noreferrer" : undefined}
-        class="flex items-center gap-3 px-3 py-2 rounded-lg border border-darkslate-100 hover:bg-darkslate-400/50 hover:border-darkslate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-darkslate-500 transition-colors group"
+        class="flex items-center gap-4 px-4 py-3 rounded-lg border border-darkslate-100 hover:bg-darkslate-400/50 hover:border-darkslate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-darkslate-500 transition-colors group"
       >
-        <Icon class="h-4 w-4 text-neutral-400 group-hover:text-neutral-200 transition-colors" name={link.icon} />
-        <span class="flex-1 text-sm text-neutral-200">{link.label}</span>
-        <Icon class="h-3.5 w-3.5 text-neutral-500 group-hover:text-neutral-400 transition-colors" name="ri:arrow-right-up-line" />
+        <Icon class="h-5 w-5 text-neutral-400 group-hover:text-neutral-200 transition-colors" name={link.icon} />
+        <span class="flex-1 text-base text-neutral-200">{link.label}</span>
+        <Icon class="h-4 w-4 text-neutral-500 group-hover:text-neutral-400 transition-colors" name="ri:arrow-right-up-line" />
       </a>
     ))}
   </div>
